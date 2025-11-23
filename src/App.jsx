@@ -84,7 +84,7 @@ function App() {
   useEffect(() => {
     // fetch data from backend using slug
     if (slug) {
-      fetch(`http://localhost:5000/api/wedding/${slug}`)
+      fetch(`https://wedding-server-09vt.onrender.com/api/wedding/${slug}`)
         .then((res) => res.json())
         .then((data) => {
           // map backend data to config format
@@ -94,6 +94,7 @@ function App() {
             groomName: data.groomName,
             brideName: data.brideName,
             date: data.weddingDate,
+
 
             time:data.time,
             maps_embed: data.maps_embed,
