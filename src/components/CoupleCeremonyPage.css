@@ -1,0 +1,94 @@
+.ceremony-bg {
+  background: #ecd6d6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: fadeInBg 1s;
+}
+@keyframes fadeInBg {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.circle.collage {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: collageIn 1.2s;
+}
+@keyframes collageIn {
+  0% { transform: scale(0.8) rotate(-10deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+.collage-img {
+  border-radius: 50%;
+  border: 8px solid #fff;
+  position: absolute;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.7s;
+}
+.img1 { width: 130px; height: 130px; left: 0; top: 40px; animation: popIn 1s 0.3s both; }
+.img2 { width: 230px; height: 230px; left: 180px; top: 0; animation: popIn 1.1s 0.5s both; }
+.img3 { width: 150px; height: 150px; left: 100px; top: 170px; animation: popIn 1.2s 0.7s both; }
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.deco-circle {
+  border: 7px solid #c7a2a2;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.6;
+}
+.deco1 { width: 54px; height: 54px; left: 55px; top: -20px; animation: decoIn 1s 0.9s both; }
+.deco2 { width: 83px; height: 83px; right: 20px; top: 190px; animation: decoIn 1s 1.2s both; }
+
+@keyframes decoIn {
+  0% { opacity: 0; transform: scale(0.2); }
+  100% { opacity: 0.6; transform: scale(1); }
+}
+
+.ceremony-content {
+  text-align: center;
+  max-width: 500px;
+  margin-top: 10px;
+  animation: fadeInContent 1.1s 1.2s both;
+}
+@keyframes fadeInContent {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.ceremony-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.7rem;
+  margin-bottom: 16px;
+}
+.ceremony-desc {
+  color: #4d3a3a;
+  font-size: 1.08rem;
+  margin-bottom: 18px;
+}
+.ceremony-btn {
+  padding: 9px 28px;
+  background: #fff;
+  border: 1.5px solid #b68b8b;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 12px;
+}
+.ceremony-btn:hover {
+  background: #fbeaea;
+}
